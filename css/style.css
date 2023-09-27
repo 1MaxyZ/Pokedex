@@ -1,13 +1,12 @@
 body {
-  background-image: url("/images/beige\ texture.jpg");
+  background-image: url("/images/beigeTextura.jpg");
   background-size: contain;
   margin: auto;
   justify-content: center;
 }
 
 #card-body-img {
-  /* background-image: url("/images/grass background.jpg"); */
-background-image: url("/images/legends_trainer.png");
+  background-image: url("/images/legendsTrainer.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
