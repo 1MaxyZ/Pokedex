@@ -1,0 +1,29 @@
+body {
+  background-image: url("/images/beige\ texture.jpg");
+  background-size: contain;
+  margin: auto;
+  justify-content: center;
+}
+
+#card-body-img {
+  /* background-image: url("/images/grass background.jpg"); */
+background-image: url("/images/legends_trainer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#buscador {
+  margin: auto;
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.form-control::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 0.25;
+}
+
+#buscador_input {
+  font-size: larger;
+}
