@@ -7,8 +7,9 @@ body {
 
 #card-body-img {
   /* background-image: url("/images/grass background.jpg"); */
-background-image: url("/img/legendsTrainer.png");
+  background-image: url("/img/legendsTrainer.png");
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #buscador {

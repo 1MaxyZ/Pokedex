@@ -16,26 +16,27 @@
   <body>
     <div class="container">
       <div class="row">
-      <div class="input-group bg-dark p-0" id="buscador">
-        <button
-          class="btn btn-outline-warning col-3"
-          type="button"
-          name="buscar"
-          id="buscador_button"
-        >
-          Buscar
-        </button>
-        <input (keyup.Space)="onKeyUp($event)"
-          type="text"
-          class="form-control col-6 bg-dark text-light border-0"
-          placeholder="nombre o ID del pokemon"
-          aria-label="Example text with button addon"
-          aria-describedby="button-addon1"
-          name="pokemon"
-          id="buscador_input"
-        />
+        <div class="input-group bg-dark p-0" id="buscador">
+          <button
+            class="btn btn-outline-warning col-3"
+            type="button"
+            name="buscar"
+            id="buscador_button"
+          >
+            Buscar
+          </button>
+          <input
+            (keyup.Space)="onKeyUp($event)"
+            type="text"
+            class="form-control col-6 bg-dark text-light border-0"
+            placeholder="nombre o ID del pokemon"
+            aria-label="Example text with button addon"
+            aria-describedby="button-addon1"
+            name="pokemon"
+            id="buscador_input"
+          />
+        </div>
       </div>
-    </div>
     </div>
     <!-- tarjeta visible -->
     <div class="container-fluid d-flex justify-content-center" id="flex"></div>
@@ -46,8 +47,7 @@
     >
       <!-- tarjeta -->
       <div
-        class="card mb-3 border-0 bg-dark text-light"
-        style="width: 550px;"
+        class="card mb-3 border-0 bg-dark text-light col-lg-5 col-12"
         id="trajeta"
       >
         <div class="row g-0">
@@ -55,7 +55,7 @@
           <img
             id="card-body-img"
             src="..."
-            class="card-img-top "
+            class="card-img-top"
             alt="img pokemon"
             height="400px"
           />
@@ -72,7 +72,7 @@
               <small id="peso">Peso: 0kg</small>
             </p>
             <!-- habilidad principal / secundaria / oculta -->
-            <div class="card-text row border-top border-secondary pt-1  pb-4">
+            <div class="card-text row border-top border-secondary pt-1 pb-4">
               <!-- principal -->
               <div class="col-4">
                 <h6>Habilidad</h6>

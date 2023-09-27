@@ -97,26 +97,24 @@ window.onresize = function () {
   }
 };
 
-
-const buscador_boton = document.querySelector("#buscador_button")
-const buscador_input = document.querySelector("#buscador_input")
+const buscador_boton = document.querySelector("#buscador_button");
+const buscador_input = document.querySelector("#buscador_input");
 //evento de buscador
 buscador_boton.addEventListener("click", () => {
-console.log(buscador_input.value)
-fetchData(buscador_input.value)
-if (document.querySelectorAll("#trajeta").length > 0) {
-    eliminarTarjeta(0)
-    buscador_input.value = ""
-}
-})
+  console.log(buscador_input.value);
+  fetchData(buscador_input.value);
+  if (document.querySelectorAll("#trajeta").length > 0) {
+    eliminarTarjeta(0);
+    buscador_input.value = "";
+  }
+});
 //eliminar tarjetas
-function eliminarTarjeta(id){
-	tarjeta = document.querySelectorAll("#trajeta")[id];	
-	if (!tarjeta){
-		console.log("El elemento selecionado no existe");
-	} else {
-		padre = tarjeta.parentNode;
-		padre.removeChild(tarjeta);
-	}
+function eliminarTarjeta(id) {
+  tarjeta = document.querySelectorAll("#trajeta")[id];
+  if (!tarjeta) {
+    console.log("El elemento selecionado no existe");
+  } else {
+    padre = tarjeta.parentNode;
+    padre.removeChild(tarjeta);
+  }
 }
-
