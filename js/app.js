@@ -20,22 +20,6 @@ const fetchData = async (id) => {
     const data = await res.json();
     //pintar la plantilla con los datos
     pintarCard(data);
-    //verificar y cambiar el texto segun su tamaño (pc/mobil)
-    {
-      if (anchoVentana > 570) {
-        document.querySelector(".atk_titulo").textContent = "Ataque";
-        document.querySelector(".def_titulo").textContent = "Defensa";
-        document.querySelector(".spa_titulo").textContent = "At.Esp.";
-        document.querySelector(".spd_titulo").textContent = "Def.Esp.";
-        document.querySelector(".spe_titulo").textContent = "velocidad";
-      } else {
-        document.querySelector(".atk_titulo").textContent = "ATK";
-        document.querySelector(".def_titulo").textContent = "DEF";
-        document.querySelector(".spa_titulo").textContent = "SPA";
-        document.querySelector(".spd_titulo").textContent = "SPD";
-        document.querySelector(".spe_titulo").textContent = "SPE";
-      }
-    }
   } catch (error) {
     //si hay error lo muestra en la consola
     console.log(error);
@@ -82,19 +66,6 @@ var anchoVentana = window.innerWidth;
 //Ajustar nombre de stats segun tamaño(pc/mobil).
 window.onresize = function () {
   anchoVentana = window.innerWidth;
-  if (anchoVentana > 700) {
-    document.querySelector(".atk_titulo").textContent = "Ataque";
-    document.querySelector(".def_titulo").textContent = "Defensa";
-    document.querySelector(".spa_titulo").textContent = "At.Esp.";
-    document.querySelector(".spd_titulo").textContent = "Def.Esp.";
-    document.querySelector(".spe_titulo").textContent = "velocidad";
-  } else {
-    document.querySelector(".atk_titulo").textContent = "ATK";
-    document.querySelector(".def_titulo").textContent = "DEF";
-    document.querySelector(".spa_titulo").textContent = "SPA";
-    document.querySelector(".spd_titulo").textContent = "SPD";
-    document.querySelector(".spe_titulo").textContent = "SPE";
-  }
 };
 
 const buscador_boton = document.querySelector("#buscador_button");
@@ -108,6 +79,7 @@ buscador_boton.addEventListener("click", () => {
     buscador_input.value = "";
   }
 });
+
 //eliminar tarjetas
 function eliminarTarjeta(id) {
   tarjeta = document.querySelectorAll("#trajeta")[id];
