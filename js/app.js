@@ -68,6 +68,17 @@ window.onresize = function () {
   anchoVentana = window.innerWidth;
 };
 
+//eliminar tarjetas
+function eliminarTarjeta(id) {
+  tarjeta = document.querySelectorAll("#trajeta")[id];
+  if (!tarjeta) {
+    console.log("El elemento selecionado no existe");
+  } else {
+    padre = tarjeta.parentNode;
+    padre.removeChild(tarjeta);
+  }
+}
+
 const buscador_boton = document.querySelector("#buscador_button");
 const buscador_input = document.querySelector("#buscador_input");
 //evento de buscador
@@ -79,14 +90,11 @@ buscador_boton.addEventListener("click", () => {
     buscador_input.value = "";
   }
 });
-
-//eliminar tarjetas
-function eliminarTarjeta(id) {
-  tarjeta = document.querySelectorAll("#trajeta")[id];
-  if (!tarjeta) {
-    console.log("El elemento selecionado no existe");
-  } else {
-    padre = tarjeta.parentNode;
-    padre.removeChild(tarjeta);
+//evento buscador (con Enter)
+document.addEventListener("keypress", (event) => {
+  // 13 es la clave del Enter
+  if (event.keyCode === 13) {
+    // presionar el boton
+    buscador_boton.click();
   }
-}
+});

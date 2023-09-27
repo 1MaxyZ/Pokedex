@@ -35,7 +35,7 @@
             Buscar
           </button>
           <input
-            (keyup.Space)="onKeyUp($event)"
+            onkeyup="javascript:this.value=this.value.toLowerCase();"
             type="text"
             class="form-control col-6 bg-dark text-light border-0"
             placeholder="nombre o ID del pokemon"
