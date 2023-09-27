@@ -1,13 +1,10 @@
 body {
-  background-image: url("https://github.com/1MaxyZ/Pokedex/blob/main/img/beigeTextura.jpg?raw=true");
-  background-size: contain;
   margin: auto;
   justify-content: center;
 }
 
 #card-body-img {
-  /* background-image: url("/images/grass background.jpg"); */
-  background-image: url("https://github.com/1MaxyZ/Pokedex/blob/main/img/legendsTrainer.png?raw=true");
+  background-image: url("../img/legendsTrainer.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
