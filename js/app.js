@@ -82,7 +82,7 @@ var anchoVentana = window.innerWidth;
 //Ajustar nombre de stats segun tamaño(pc/mobil).
 window.onresize = function () {
   anchoVentana = window.innerWidth;
-  if (anchoVentana > 570) {
+  if (anchoVentana > 700) {
     document.querySelector(".atk_titulo").textContent = "Ataque";
     document.querySelector(".def_titulo").textContent = "Defensa";
     document.querySelector(".spa_titulo").textContent = "At.Esp.";
