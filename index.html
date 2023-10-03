@@ -14,14 +14,6 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <img
-      src="img/beigeTextura.jpg"
-      alt=""
-      srcset=""
-      style="position: absolute"
-      width="100%"
-      height="120%"
-    />
     <!-- buscador -->
     <div class="container">
       <div class="row">
@@ -60,17 +52,18 @@
     >
       <!-- tarjeta -->
       <div
-        class="card mb-3 border-0 bg-dark text-light col-md-4 col-12"
+        class="card mb-5 border-0 bg-dark text-light col-lg-4 col-12"
         id="trajeta"
       >
-        <div class="row g-0" style="height: 100%">
+        <div class="row g-0" style="height: 150%">
           <!-- imagen de la card -->
           <img
             id="card-body-img"
             src="..."
             class="card-img-top"
             alt="img pokemon"
-            height="350px"
+            height="auto"
+            width="100%"
           />
           <!-- cuerpo de la card -->
           <div class="card-body" style="height: auto">
@@ -87,63 +80,61 @@
             <!-- habilidad principal / secundaria / oculta -->
             <div class="card-text row border-top border-secondary pt-1 pb-4">
               <!-- principal -->
-              <div class="col-4">
-                <h6>Habilidad</h6>
+              <div class="col-6">
+                <h6 class="texto-linea">Habilidad</h6>
                 <p class="card-text">
-                  <small class="habilidad0">...</small>
+                  <small class="habilidad0 texto-linea">...</small>
                 </p>
-              </div>
-              <!-- secundaria -->
-              <div class="col-4">
-                <h6>H.Secundaria</h6>
                 <p class="card-text">
-                  <small class="habilidad1">...</small>
+                  <small class="habilidad1 texto-linea"></small>
                 </p>
               </div>
               <!-- oculta -->
-              <div class="col-4">
-                <h6>H.Oculta</h6>
+              <div class="col-6">
+                <h6 class="texto-linea">Hab.oculta</h6>
                 <p class="card-text">
-                  <small class="habilidad2">...</small>
+                  <small class="oculta texto-linea">...</small>
                 </p>
               </div>
             </div>
             <!-- stats -->
             <div class="card-footer row border-secondary">
               <div class="col-2 text-warning">
-                <h6>PS</h6>
+                <h6 class="texto-linea">PS</h6>
                 <p class="card-text">
-                  <small class="ps" style="font-size: 80%">000</small>
+                  <small class="ps texto-linea" style="font-size: 80%"
+                    >000</small
+                  >
                 </p>
               </div>
               <div class="col-2 text-warning">
-                <h6>ATK</h6>
+                <h6 class="texto-linea">ATK</h6>
                 <p class="card-text">
-                  <small class="ataque">000</small>
+                  <small class="ataque texto-linea">000</small>
                 </p>
               </div>
               <div class="col-2 text-warning">
-                <h6>DEF</h6>
+                <h6 class="texto-linea">DEF</h6>
                 <p class="card-text">
-                  <small class="defensa">000</small>
+                  <small class="defensa texto-linea">000</small>
                 </p>
               </div>
               <div class="col-2 text-warning">
-                <h6>SPA</h6>
+                <h6 class="texto-linea">SPA</h6>
                 <p class="card-text">
-                  <small class="atEsp">000</small>
+                  <small class="atEsp texto-linea">000</small>
                 </p>
               </div>
               <div class="col-2 text-warning">
-                <h6>SPD</h6>
+                <h6 class="texto-linea">SPD</h6>
                 <p class="card-text">
-                  <small class="defEsp">000</small>
+                  <small class="defEsp texto-linea">000</small>
                 </p>
               </div>
               <div class="col-2 text-warning">
-                <h6>SPE</h6>
+                <h6 class="texto-linea">SPE</h6>
                 <p class="card-text">
-                  <small class="velocidad">000</small>
+                  <small class="velocidad texto-linea">000</small>
                 </p>
               </div>
             </div>

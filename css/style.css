@@ -1,6 +1,9 @@
 body {
+  min-height: 900px;
   margin: auto;
   justify-content: center;
+  background-image: url("../img/beigeTextura.jpg");
+  background-size: contain;
 }
 
 #card-body-img {
@@ -23,4 +26,9 @@ body {
 
 #buscador_input {
   font-size: larger;
+}
+
+.texto-linea {
+  overflow: hidden;
+  white-space: nowrap;
 }

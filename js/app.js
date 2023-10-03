@@ -53,19 +53,18 @@ const pintarCard = (pokemon) => {
   clone.querySelector("#peso").textContent = "Peso: "+ pokemon.weight/10 +" kg";
   //habilidades del pokemon segun su .length (entre 1 y 3 habilidades)
   for (let i = 0; i < pokemon.abilities.length; i++) {
-    clone.querySelector(".habilidad" + i).textContent = pokemon.abilities[i].ability.name;
+    if (pokemon.abilities[i].is_hidden == false) {
+      clone.querySelector(".habilidad" + i).textContent = pokemon.abilities[i].ability.name;
+    } else {
+      clone.querySelector(".oculta").textContent = pokemon.abilities[i].ability.name; 
+    }
+  
     }
   }
   //GUARDAR EL CODIGO DE CLON EN FRAGMENT
   fragment.appendChild(clone);
   //MOVER EL CODIGO A FLEX
   flex.appendChild(fragment);
-};
-
-var anchoVentana = window.innerWidth;
-//Ajustar nombre de stats segun tamaño(pc/mobil).
-window.onresize = function () {
-  anchoVentana = window.innerWidth;
 };
 
 //eliminar tarjetas
@@ -79,9 +78,9 @@ function eliminarTarjeta(id) {
   }
 }
 
+//evento de buscador
 const buscador_boton = document.querySelector("#buscador_button");
 const buscador_input = document.querySelector("#buscador_input");
-//evento de buscador
 buscador_boton.addEventListener("click", () => {
   console.log(buscador_input.value);
   fetchData(buscador_input.value);
@@ -90,6 +89,7 @@ buscador_boton.addEventListener("click", () => {
     buscador_input.value = "";
   }
 });
+
 //evento buscador (con Enter)
 document.addEventListener("keypress", (event) => {
   // 13 es la clave del Enter
