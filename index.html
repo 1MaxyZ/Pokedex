@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,7 @@
             onkeyup="javascript:this.value=this.value.toLowerCase();"
             type="text"
             class="form-control col-6 bg-dark text-light border-0"
-            placeholder="nombre o ID del pokemon"
+            placeholder="nombre o numero del pokemon"
             aria-label="Example text with button addon"
             aria-describedby="button-addon1"
             name="pokemon"
@@ -69,21 +69,44 @@
           <div class="card-body" style="height: auto">
             <!-- nombre / ID -->
             <h2 class="card-title text-warning">Nombre del pokemon #000</h2>
-            <!-- altura -->
-            <p class="card-text m-0 border-top border-warning">
-              <small id="altura">Altura: 0m</small>
-            </p>
-            <!-- peso -->
-            <p class="card-text m-0 mb-4">
-              <small id="peso">Peso: 0kg</small>
-            </p>
+
+            <div class="row border-top border-warning">
+              <div class="col-6">
+                <!-- altura -->
+                <p class="card-text m-0">
+                  <small id="altura">Altura: 0m</small>
+                </p>
+                <!-- peso -->
+                <p class="card-text m-0 mb-4">
+                  <small id="peso">Peso: 0kg</small>
+                </p>
+              </div>
+              <div class="col-6">
+                <h6 class="texto-linea">Tipo/s:</h6>
+                <div class="row">
+                  <div class="col-4">
+                    <!-- tipo 1 -->
+                    <div class="icon">
+                      <img class="tipo" src="..." />
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <!-- tipo 2 -->
+                    <div class="icon icon2">
+                      <img class="tipo tipo2" src="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- habilidad principal / secundaria / oculta -->
             <div class="card-text row border-top border-secondary pt-1 pb-4">
               <!-- principal -->
               <div class="col-6">
                 <h6 class="texto-linea">Habilidad</h6>
                 <p class="card-text">
-                  <small class="habilidad0 texto-linea">...</small>
+                  <small class="habilidad0 texto-linea">N/A</small>
                 </p>
                 <p class="card-text">
                   <small class="habilidad1 texto-linea"></small>
@@ -93,7 +116,7 @@
               <div class="col-6">
                 <h6 class="texto-linea">Hab.oculta</h6>
                 <p class="card-text">
-                  <small class="oculta texto-linea">...</small>
+                  <small class="oculta texto-linea"></small>
                 </p>
               </div>
             </div>

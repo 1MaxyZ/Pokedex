@@ -51,16 +51,29 @@ const pintarCard = (pokemon) => {
   clone.querySelector(".velocidad").textContent = pokemon.stats[5].base_stat;
   clone.querySelector("#altura").textContent = "Altura: "+ pokemon.height/10 +" m";
   clone.querySelector("#peso").textContent = "Peso: "+ pokemon.weight/10 +" kg";
-  //habilidades del pokemon segun su .length (entre 1 y 3 habilidades)
+  //habilidades del pokemon
   for (let i = 0; i < pokemon.abilities.length; i++) {
     if (pokemon.abilities[i].is_hidden == false) {
       clone.querySelector(".habilidad" + i).textContent = pokemon.abilities[i].ability.name;
     } else {
       clone.querySelector(".oculta").textContent = pokemon.abilities[i].ability.name; 
     }
-  
     }
   }
+  //tipos elementales
+  //prettier-ignore
+  {
+    clone.querySelector(".icon").setAttribute("class", "icon "+pokemon.types[0].type.name) // primer tipo
+    clone.querySelector(".tipo").setAttribute("src","icons/" + pokemon.types[0].type.name + ".svg")
+  if (pokemon.types.length == 2) { // if para ver si tiene 2do tipo
+    clone.querySelector(".icon2").setAttribute("class", "icon "+pokemon.types[1].type.name) //tipo 2
+    clone.querySelector(".tipo2").setAttribute("src","icons/" + pokemon.types[1].type.name + ".svg")
+  } else { //desaparecer tipo 2
+    clone.querySelector(".icon2").setAttribute("class", "icon desaparecer")
+    clone.querySelector(".tipo2").setAttribute("src","icons/" + pokemon.types[0].type.name + ".svg")
+  }
+  }
+
   //GUARDAR EL CODIGO DE CLON EN FRAGMENT
   fragment.appendChild(clone);
   //MOVER EL CODIGO A FLEX
