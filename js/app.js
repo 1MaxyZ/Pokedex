@@ -5,7 +5,7 @@ function getRandomInt(min, max) {
 
 //"DOMContentLoaded" se activa cuando carga la pagina
 document.addEventListener("DOMContentLoaded", () => {
-  const random = getRandomInt(1, 151);
+  const random = getRandomInt(1, 1018);
   console.log(random);
   fetchData(random);
 });
@@ -51,6 +51,7 @@ const pintarCard = (pokemon) => {
   clone.querySelector(".velocidad").textContent = pokemon.stats[5].base_stat;
   clone.querySelector("#altura").textContent = "Altura: "+ pokemon.height/10 +" m";
   clone.querySelector("#peso").textContent = "Peso: "+ pokemon.weight/10 +" kg";
+  clone.querySelector("#info").setAttribute("href","https://www.wikidex.net/wiki/" + pokemon.name);
   //habilidades del pokemon
   for (let i = 0; i < pokemon.abilities.length; i++) {
     if (pokemon.abilities[i].is_hidden == false) {

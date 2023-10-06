@@ -16,6 +16,19 @@
   <body>
     <!-- buscador -->
     <div class="container">
+      <div class="row justify-content-center">
+        <div class="card text-bg-dark mb-3">
+          <div class="card-header text-center">Bienvenido a</div>
+          <div class="card-body">
+            <h1 class="card-title text-center text-warning">La Pokedex</h1>
+            <p class="card-text text-center">
+              Aqui podras buscar a cualquier pokemon existente de tu interes con
+              solo saber su nombre o ID. <br />
+              (Ej: 1-1017, pikachu, arceus, emboar, etc...)
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="input-group bg-dark p-0" id="buscador">
           <button
@@ -30,7 +43,7 @@
             onkeyup="javascript:this.value=this.value.toLowerCase();"
             type="text"
             class="form-control col-6 bg-dark text-light border-0"
-            placeholder="nombre o numero del pokemon"
+            placeholder="ingrese un nombre o ID"
             aria-label="Example text with button addon"
             aria-describedby="button-addon1"
             name="pokemon"
@@ -68,8 +81,20 @@
           <!-- cuerpo de la card -->
           <div class="card-body" style="height: auto">
             <!-- nombre / ID -->
-            <h2 class="card-title text-warning">Nombre del pokemon #000</h2>
-
+            <div class="row">
+              <h2 class="col card-title text-warning">
+                Nombre del pokemon #000
+              </h2>
+              <p class="col card-text m-0 mt-3 justify-content-start">
+                <a
+                  href="https://www.wikidex.net/wiki/"
+                  target="_blank"
+                  id="info"
+                  class="text-warning">
+                  mas info
+                </a>
+              </p>
+            </div>
             <div class="row border-top border-warning">
               <div class="col-6">
                 <!-- altura -->
